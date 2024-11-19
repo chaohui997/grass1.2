@@ -1,0 +1,2 @@
+USERS:
+    - { uid: x, proxy: socks5://x:5125,ua: x}
