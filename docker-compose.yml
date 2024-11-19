@@ -6,3 +6,12 @@ services:
     volumes:
       - ./config.yaml:/grass1.2/config.yaml
     command: python3.10 /grass1.2/run_grass.py
+    working_dir: /grass1.2
+    environment:
+      - ENV_VAR_NAME=value
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    restart: unless-stopped
