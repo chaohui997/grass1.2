@@ -129,7 +129,7 @@ class Grass:
                         await wss.send_json(pong_data)
                         self.log(f"{white}发送 {magenta}pong {white}到服务器 !")
                         # you can edit the countdown in code below
-                        #await countdown(3)
+                        # await countdown(1)
             except KeyboardInterrupt:
                 await self.ses.close()
                 exit()
@@ -158,7 +158,7 @@ async def main(configs):
 def read_config():
     import yaml
     try:
-        with open('config.yaml', 'r') as file:
+        with open('./config.yaml', 'r') as file:
             config = yaml.safe_load(file)["USERS"]
             return config
     except FileNotFoundError:
