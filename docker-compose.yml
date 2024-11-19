@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  grass:
+    image: chaohui997/grass1.2:latest
+    volumes:
+      - ./config.yaml:/grass1.2/config.yaml
+    command: python3 /grass1.2/run_grass.py
